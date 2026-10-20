@@ -118,3 +118,6 @@ Para mais informações ou dúvidas, entre em contato com:
 🐙 GitHub: seu-usuario
 
 Sinta-se à vontade para abrir issues ou enviar pull requests para contribuir com este projeto.
+
+## Progresso
+- Arquivo identificado para modificação do Lockscreen: `frameworks/base/core/java/com/android/internal/widget/LockPatternView.java`
