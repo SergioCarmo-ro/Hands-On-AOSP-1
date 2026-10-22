@@ -121,3 +121,39 @@ Sinta-se à vontade para abrir issues ou enviar pull requests para contribuir co
 
 ## Progresso
 - Arquivo identificado para modificação do Lockscreen: `frameworks/base/core/java/com/android/internal/widget/LockPatternView.java`
+
+
+## 🛡️ Feature: Clash of Clans Lock Screen Theme (AOSP)
+
+Uma customização visual aplicada ao sistema operacional Android (AOSP 14) para incorporar a identidade visual clássica do jogo **Clash of Clans** diretamente na tela de desbloqueio por padrão (`LockPatternView`).
+
+### 📂 Arquivo Alvo
+* **Caminho:** `frameworks/base/core/java/com/android/internal/widget/LockPatternView.java`
+
+### 🎨 Paleta de Cores Temática
+* **Ouro Clássico (`#FFD700`):** Cor principal do traço do padrão, inspirada nas moedas de ouro do jogo.
+* **Elixir Rosa (`#DA70D6`):** Cor aplicada quando o padrão de desbloqueio está correto.
+* **Vermelho de Batalha (`#FF4500`):** Cor de alerta utilizada quando a autenticação falha.
+* **Espessura do Traço:** Aumentada para `16f` para conferir um aspecto mais robusto e visível.
+
+### 💻 Código Implementado (`setColors`)
+
+```java
+/**
+ * Change theme colors - Tema Clash of Clans (Ouro & Elixir)
+ * @param regularColor The dot color
+ * @param successColor Color used when pattern is correct
+ * @param errorColor Color used when authentication fails
+ */
+public void setColors(int regularColor, int successColor, int errorColor) {
+    mRegularColor = Color.parseColor("#FFD700"); // Ouro clássico do Clash of Clans
+    mErrorColor = Color.parseColor("#FF4500");   // Vermelho de Batalha / Alerta
+    mSuccessColor = Color.parseColor("#DA70D6"); // Brilho de Elixir
+    
+    mPathPaint.setColor(mRegularColor);
+    mPathPaint.setStrokeWidth(16f); // Deixa o traço mais espesso e robusto
+    invalidate();
+}
+
+```
+
