@@ -114,7 +114,7 @@ source build/envsetup.sh
 📬 Contato
 Para mais informações ou dúvidas, entre em contato com:
 
-📧 Email: seu-email@example.com
+📧 Email: sergioademircarmo@gmail.com
 🐙 GitHub: seu-usuario
 
 Sinta-se à vontade para abrir issues ou enviar pull requests para contribuir com este projeto.
